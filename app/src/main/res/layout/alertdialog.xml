@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/alertdialog_ll"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal">
+        <!--左边-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="bottom"
+                android:background="@android:color/white"/>
+        </LinearLayout>
+        <!--中间-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_weight="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/showdialog_image_bg"
+                    android:padding="8dp"
+                    android:paddingBottom="30dp"
+                    android:src="@drawable/f6"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <!--右边,商品名称和价格-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="vertical"/>
+            <!--商品名称,特惠价,商品编号-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="商品名称:"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/holo_orange_dark"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"/>
+                <ImageView
+                    android:id="@+id/fn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentRight="true"
+
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/fn"/>
+            </RelativeLayout>
+
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+                  <TextView
+                      android:id="@+id/alertdialog_price"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="3dp"
+                      android:text="价格:¥120"
+                      android:textColor="@android:color/holo_red_dark"
+                      android:textSize="15sp"/>
+<ImageView
+    android:layout_marginLeft="3dp"
+    android:layout_toRightOf="@id/alertdialog_price"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+ android:layout_centerVertical="true"
+    android:background="@drawable/good_price"/>
+              </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/product_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="商品编号:NSSB001"
+                    android:textColor="@android:color/darker_gray"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--以下部分为颜色等内容区*****************************************************************************-->
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/alertdialog_ll"
+
+        android:background="@android:color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:paddingTop="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingLeft="10dp"
+            android:text="颜色"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"/>
+
+        <RelativeLayout
+            android:id="@+id/color_chose_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/btn_take_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/button_bg"
+                android:padding="5dp"
+                android:text="红色"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/btn_take_photo02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="5dip"
+                android:layout_toRightOf="@id/btn_take_photo"
+                android:background="@drawable/button_bg"
+                android:padding="5dp"
+                android:text="黑色"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/btn_take_photo03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="5dip"
+                android:layout_toRightOf="@id/btn_take_photo02"
+                android:background="@drawable/button_bg"
+                android:padding="5dp"
+                android:text="黄色"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+
+        <!--尺寸的下划线*********************************************************-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/darker_gray"
+            android:paddingBottom="5dp"/>
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+
+
+            android:text="尺寸"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@id/btn_take_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/button_bg"
+                android:padding="5dp"
+                android:text="S"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@id/btn_take_photo02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="5dip"
+                android:layout_toRightOf="@id/btn_take_photo"
+                android:background="@drawable/button_bg"
+                android:padding="5dp"
+                android:text="M"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@id/btn_take_photo03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="5dip"
+                android:layout_toRightOf="@id/btn_take_photo02"
+                android:background="@drawable/button_bg"
+                android:padding="5dp"
+                android:text="L"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@id/btn_take_photo03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="5dip"
+                android:layout_toRightOf="@id/btn_take_photo02"
+                android:background="@drawable/button_bg"
+                android:padding="5dp"
+                android:text="XL"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+        <!--以下为设置数量内容区-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/darker_gray"
+            android:paddingBottom="5dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@id/btn_take_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/button_bg"
+                android:padding="5dp"
+                android:text="数量"
+                android:textStyle="bold"/>
+
+
+            <LinearLayout
+                android:layout_marginTop="5dip"
+                android:layout_alignParentRight="true"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/reduce"
+                    android:text="-"
+                    android:textStyle="bold"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:background="@drawable/reduce"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/middle"
+                    android:text="1"
+                    android:textStyle="bold"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:background="@drawable/middle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/right"
+                    android:text="+"
+                    android:textStyle="bold"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:background="@drawable/plus"
+                    android:layout_width="0dp"
+                    android:layout_marginRight="20dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+        <!--以下为加入购物车区域-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            android:orientation="horizontal">
+
+            <Button
+              android:layout_gravity="bottom"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_light"
+                android:onClick="selectAll"
+                android:text="加入购物车"/>
+
+            <Button
+                android:layout_gravity="bottom"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_red_light"
+                android:onClick="reverse"
+                android:text="全选"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

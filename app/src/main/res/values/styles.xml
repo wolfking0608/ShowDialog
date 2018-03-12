@@ -1,0 +1,61 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+    <!--parent="@android:style/Theme.Dialog"-->
+    <style name="MyDialogStyleBottom" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/AnimBottom</item>
+        <item name="android:windowFrame">@null</item>
+        <!--<item name="android:windowFullscreen">true</item>-->
+        ;!-- 边框 -->
+        <!--<item name="android:windowIsFloating">true</item>-->
+        ;!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        ;!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        ;!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        ;!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        ;!-- 模糊 -->
+    </style>
+
+
+
+    <!-- 自定义时间Dialog弹出样式(底部有动画效果) -->
+    <style name="dialog_with_alpha" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+        <!-- 背景透明 -->
+        <!-- <item name="android:backgroundDimEnabled">false</item> -->
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+
+    <style name="Umengstyle" parent="android:Animation">
+    <item name="android:activityOpenEnterAnimation">@anim/umeng_socialize_slide_in_from_bottom</item>
+        <!-- 进入时的动画 -->
+        <item name="android:activityOpenExitAnimation">@anim/umeng_socialize_fade_out</item>
+        <!-- 退出时的动画 -->
+        <item name="android:activityCloseEnterAnimation">@anim/umeng_socialize_slide_in_from_bottom</item>
+
+        <item name="android:activityCloseExitAnimation">@anim/umeng_socialize_fade_out</item>
+    </style>
+</resources>
